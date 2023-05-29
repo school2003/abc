@@ -1,0 +1,14 @@
+<td>{{ index + 1 }}</td>
+<td width="50"><img width="50" [src]="product.img" /></td>
+<td>{{ product.name }}</td>
+<td>{{ product.price }}</td>
+<td>
+  <button class="btn btn-danger" (click)="removeItem(product.id)">
+    Remove
+  </button>
+  <!-- <button *ngIf="status" (click)="getInfo(product)">detail</button> -->
+</td>
+<hr>
+<hr />
+<h2>Detail</h2>
+<app-product-detail  [data]="product"></app-product-detail>
